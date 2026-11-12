@@ -228,7 +228,7 @@ const PROJECTS = [
     },
   },
   {
-    id: "trust-issues", cats: ["interactive"], year: "2026",
+    id: "trust-issues", cats: ["interactive"], year: "2026", live: "https://trust-issues-three.vercel.app",
     img: "assets/trust-issues.jpg",
     stack: ["Next.js", "React", "TypeScript", "GSAP", "Framer Motion", "Tailwind CSS"],
     pt: {
@@ -324,7 +324,7 @@ const JOURNEY = [
     when: "2026 →",
     pt: { title: "IA aplicada & Machine Learning", org: "Projetos próprios e para clientes", items: [
       "8 projetos construídos: SaaS, web apps, agentes de IA e experiências interativas.",
-      "Três sites em produção na Vercel e um em uso por cliente real.",
+      "Quatro sites em produção na Vercel e um em uso por cliente real.",
       "Todos os projetos construídos com IA (Claude Code, Codex), com código revisado e testado.",
     ]},
     en: { title: "Development & applied AI", org: "Own and client projects", items: [
