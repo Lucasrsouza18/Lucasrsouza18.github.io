@@ -4,7 +4,7 @@
 const CONFIG = {
   name: "Lucas Ribeiro de Souza",
   email: "lucasr.souza18@gmail.com",
-  linkedin: "",                                    // cole aqui o link do seu LinkedIn
+  linkedin: "https://www.linkedin.com/in/lucas-ribeiro-862273413",
   github: "https://github.com/Lucasrsouza18",
   resume: "",                                      // opcional: "assets/curriculo.pdf"
   location: "São Paulo, Brasil",
