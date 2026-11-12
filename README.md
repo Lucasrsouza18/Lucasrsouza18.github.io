@@ -6,7 +6,7 @@ Portfólio interativo com projetos de desenvolvimento web, IA aplicada e automa�
 - globo interativo no hero (arraste para girar) com rotas saindo de São Paulo;
 - transição de cor azul → claro e texto que acende palavra por palavra;
 - cena fixa com um caminhão real (foto recortada) atravessando a tela com a carga de projetos;
-- galeria horizontal de projetos com filtros, cards com tilt e modal de detalhes (← →);
+- grade de projetos com filtros, cards com tilt e modal de detalhes (← →);
 - trajetória como uma estrada com asfalto real sobre uma foto aérea, com o caminhão (visto de cima) dirigindo conforme a rolagem;
 - navio porta-contêiner atravessando a tela antes do contato;
 - skills que levam aos projetos, marquee no contato, terminal (`/`).

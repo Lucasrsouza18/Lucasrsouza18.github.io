@@ -197,6 +197,37 @@ const PROJECTS = [
     },
   },
   {
+    id: "beachready", cats: ["interactive"], year: "2026", live: "https://beachready-app.vercel.app",
+    img: "assets/beachready.jpg",
+    stack: ["React", "Vite", "JavaScript", "CSS", "localStorage", "Pix", "Vercel"],
+    pt: {
+      title: "BeachReady", type: "App de reservas · Marketplace",
+      short: "App para reservar cadeira e guarda-sol na praia, com área do cliente e painel do barraqueiro.",
+      problem: "Na praia, quem chega cedo pega o lugar e o barraqueiro não sabe quantos clientes terá no dia; tudo é combinado no improviso.",
+      solution: "Um app com dois lados: o cliente escolhe a praia e a barraca, define data, horário, cadeiras e guarda-sóis e paga via Pix; o barraqueiro acompanha reservas, avaliações e faturamento num painel próprio.",
+      highlights: [
+        "Fluxo completo de reserva: busca por praia, barraca ou cidade, escolha do set e cálculo automático do valor.",
+        "Pagamento simulado com Pix (QR Code e copia e cola), crédito e débito, com validação dos campos do cartão.",
+        "Painel do barraqueiro com reservas do dia, faturamento por dia, semana e mês, ticket médio e avaliações.",
+        "Configuração da barraca: preços, número de sets e horário de funcionamento.",
+        "Reservas salvas no localStorage, avaliações após a reserva, FAQ e central de suporte.",
+      ],
+    },
+    en: {
+      title: "BeachReady", type: "Booking app · Marketplace",
+      short: "App to book beach chairs and umbrellas, with a customer area and a vendor dashboard.",
+      problem: "At the beach, whoever arrives first gets the spot and vendors don't know how many customers they'll have that day.",
+      solution: "A two-sided app: customers pick the beach and vendor, set date, time, chairs and umbrellas and pay via Pix; vendors track bookings, reviews and revenue in their own dashboard.",
+      highlights: [
+        "Full booking flow: search by beach, vendor or city, choose the set and automatic price calculation.",
+        "Simulated payment with Pix (QR code and copy-paste), credit and debit, with card field validation.",
+        "Vendor dashboard with today's bookings, daily, weekly and monthly revenue, average ticket and reviews.",
+        "Vendor setup: prices, number of sets and opening hours.",
+        "Bookings stored in localStorage, post-booking reviews, FAQ and support center.",
+      ],
+    },
+  },
+  {
     id: "trust-issues", cats: ["interactive"], year: "2026",
     img: "assets/trust-issues.jpg",
     stack: ["Next.js", "React", "TypeScript", "GSAP", "Framer Motion", "Tailwind CSS"],
@@ -292,8 +323,8 @@ const JOURNEY = [
   {
     when: "2026 →",
     pt: { title: "IA aplicada & Machine Learning", org: "Projetos próprios e para clientes", items: [
-      "7 projetos construídos: SaaS, web apps, agentes de IA e experiências interativas.",
-      "Dois sites em produção na Vercel e um em uso por cliente real.",
+      "8 projetos construídos: SaaS, web apps, agentes de IA e experiências interativas.",
+      "Três sites em produção na Vercel e um em uso por cliente real.",
       "Todos os projetos construídos com IA (Claude Code, Codex), com código revisado e testado.",
     ]},
     en: { title: "Development & applied AI", org: "Own and client projects", items: [
@@ -369,7 +400,7 @@ Object.assign(I18N.pt, {
   "man.h1": "Eu movia carga.", "man.h2": "Hoje entrego IA aplicada.",
   "man.caption": "De muitas operações, um método",
   "stats.live": "sites em produção",
-  "story.big": "Projetos", "story.tag": "carga de hoje · 7 projetos",
+  "story.big": "Projetos", "story.tag": "carga de hoje · 8 projetos",
   "journey.title": "A rota até aqui", "journey.lead": "Role a página para dirigir pela trajetória.",
   "contact.big": "Vamos conversar",
 });
