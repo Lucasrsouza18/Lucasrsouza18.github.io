@@ -1,4 +1,4 @@
-/* Lucas Ribeiro — portfólio
+/* Lucas Ribeiro: portfólio
    Dados (projetos, textos, contato) ficam em data.js. */
 
 const $ = (s, el = document) => el.querySelector(s);
@@ -97,7 +97,7 @@ function mockHTML(kind) {
 const visual = (p) => (p.img ? `<img src="${p.img}" alt="${esc(p[lang].title)}" loading="lazy" />` : mockHTML(p.mock));
 
 /* =========================================================
-   Projetos — trilho horizontal
+   Projetos
    ========================================================= */
 function renderFilters() {
   const f = t("filters");
@@ -109,7 +109,7 @@ function renderFilters() {
 $("#filters").addEventListener("click", (e) => {
   const b = e.target.closest("[data-f]"); if (!b) return;
   filter = b.dataset.f; renderFilters(); applyFilter();
-  if (hasGsap) { gsap.set("#track", { x: 0 }); ScrollTrigger.refresh(); }
+  if (hasGsap) ScrollTrigger.refresh();
 });
 function applyFilter() {
   $$(".card").forEach((c) => c.classList.toggle("hide", filter !== "all" && !c.dataset.cats.split(" ").includes(filter)));
@@ -194,7 +194,7 @@ document.addEventListener("keydown", (e) => {
 });
 
 /* =========================================================
-   Trajetória — estrada com caminhão
+   Trajetória: estrada com caminhão
    ========================================================= */
 function renderStops() {
   // ordem cronológica: do Exército até hoje
@@ -291,11 +291,11 @@ $("#contactLinks").addEventListener("click", async (e) => {
   const lbl = $("[data-lbl]", b); lbl.textContent = ui("copied"); setTimeout(() => (lbl.textContent = ui("copy")), 1600);
 });
 function renderMarquee() {
-  $("#marquee").innerHTML = Array.from({ length: 6 }, () => `<span>${esc(t("contact.big"))} —</span>`).join("");
+  $("#marquee").innerHTML = Array.from({ length: 6 }, () => `<span>${esc(t("contact.big"))} ·</span>`).join("");
 }
 
 /* =========================================================
-   Globo (canvas 2D) — arraste para girar
+   Globo (canvas 2D): arraste para girar
    ========================================================= */
 (function globe() {
   const c = $("#globe"), ctx = c.getContext("2d");
@@ -419,26 +419,21 @@ function setupScroll() {
 
   // cena do caminhão: entra pela esquerda, para no centro, sai pela direita
   if (!reduced) {
-    const tl = gsap.timeline({ defaults: { ease: "none" }, scrollTrigger: { trigger: "#story", start: "top top", end: "+=240%", scrub: 0.7, pin: true } });
+    const tl = gsap.timeline({ defaults: { ease: "none" }, scrollTrigger: { trigger: "#story", start: "top top", end: "+=240%", scrub: 1.2, pin: true } });
     tl.fromTo("#storyBig", { xPercent: 8 }, { xPercent: -58, duration: 1 }, 0)
       .fromTo("#truck", { x: () => -innerWidth * 1.25 }, { x: 0, duration: 0.38, ease: "power2.out" }, 0)
       .to("#truck", { x: () => innerWidth * 1.3, duration: 0.36, ease: "power2.in" }, 0.62)
       .fromTo("#storyLane", { backgroundPositionX: 0 }, { backgroundPositionX: -900, duration: 0.38, ease: "power2.out" }, 0)
-      .to("#storyLane", { backgroundPositionX: -1800, duration: 0.36, ease: "power2.in" }, 0.62)
-      .fromTo("#truck img", { y: 0 }, { y: -2, duration: 0.04, repeat: 7, yoyo: true }, 0.4);
+      .to("#storyLane", { backgroundPositionX: -1800, duration: 0.36, ease: "power2.in" }, 0.62);
   }
 
-  // trilho de projetos horizontal (desktop)
-  mm.add("(min-width: 901px)", () => {
-    const track = $("#track");
-    const dist = () => Math.max(0, track.scrollWidth - innerWidth);
-    const tween = gsap.to(track, {
-      x: () => -dist(), ease: "none",
-      scrollTrigger: { trigger: "#projectsPin", start: "top top", end: () => `+=${dist()}`, scrub: 0.8, pin: true, invalidateOnRefresh: true,
-        onUpdate: (s) => ($("#trackBar").style.width = `${s.progress * 100}%`) },
+  // projetos: cards aparecem inteiros, em sequência, conforme a rolagem
+  if (!reduced) {
+    ScrollTrigger.batch(".card", {
+      start: "top 90%", once: true,
+      onEnter: (els) => gsap.fromTo(els, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power3.out", stagger: 0.1, overwrite: true }),
     });
-    return () => tween.kill();
-  });
+  }
 
   // estrada
   ScrollTrigger.create({ trigger: "#roadBody", start: "top 55%", end: "bottom 55%", onUpdate: (s) => placeTruck(s.progress), onRefresh: (s) => placeTruck(s.progress) });
@@ -502,8 +497,8 @@ const COMMANDS = {
   <span class="b">clear</span>        clear the screen
   <span class="b">exit</span>         close the terminal`),
   whoami: () => (lang === "pt"
-    ? `<span class="c">${CONFIG.name}</span> — ${CONFIG.location}\nEx-sargento de logística do Exército (8 anos), hoje desenvolvendo produtos web com IA.\nMachine Learning @ Stanford ✓ · Deep Learning · AWS · ADS (cursando)\nInglês fluente.`
-    : `<span class="c">${CONFIG.name}</span> — ${CONFIG.location}\nFormer Army logistics sergeant (8 years), now building AI-powered web products.\nMachine Learning @ Stanford ✓ · Deep Learning · AWS · Systems Analysis (in progress)\nFluent English.`),
+    ? `<span class="c">${CONFIG.name}</span> · ${CONFIG.location}\nEx-sargento de logística do Exército (8 anos), hoje trabalhando com IA aplicada e machine learning.\nMachine Learning @ Stanford ✓ · Deep Learning · AWS · ADS (cursando)\nInglês fluente.`
+    : `<span class="c">${CONFIG.name}</span> · ${CONFIG.location}\nFormer Army logistics sergeant (8 years), now building AI-powered web products.\nMachine Learning @ Stanford ✓ · Deep Learning · AWS · Systems Analysis (in progress)\nFluent English.`),
   projetos: () => PROJECTS.map((p) => `<span class="c">${p.id.padEnd(18)}</span>${esc(p[lang].short)}`).join("\n") + `\n<span class="d">${lang === "pt" ? "→ use open &lt;id&gt; para detalhes" : "→ use open &lt;id&gt; for details"}</span>`,
   stack: () => SKILLS.map((g) => `<span class="c">${g.group[lang]}:</span> ${g.items.map(skillName).join(", ")}`).join("\n"),
   trajetoria: () => JOURNEY.map((j) => `<span class="b">${j.when.padEnd(12)}</span>${esc(j[lang].title)} <span class="d">· ${esc(j[lang].org)}</span>`).join("\n"),
@@ -537,7 +532,7 @@ $("#termForm").addEventListener("submit", (e) => {
     return;
   }
   const fn = COMMANDS[key];
-  const out = fn ? fn(args) : `<span class="e">${lang === "pt" ? "comando não encontrado" : "command not found"}: ${esc(cmd)}</span> — ${lang === "pt" ? "digite" : "type"} <span class="b">help</span>`;
+  const out = fn ? fn(args) : `<span class="e">${lang === "pt" ? "comando não encontrado" : "command not found"}: ${esc(cmd)}</span>. ${lang === "pt" ? "digite" : "type"} <span class="b">help</span>`;
   if (out) print(out);
 });
 tIn.addEventListener("keydown", (e) => {

@@ -1,5 +1,5 @@
 /* =========================================================
-   CONFIGURE AQUI — seus links de contato
+   CONFIGURE AQUI: seus links de contato
    ========================================================= */
 const CONFIG = {
   name: "Lucas Ribeiro de Souza",
@@ -18,10 +18,10 @@ const I18N = {
     "nav.projects": "Projetos", "nav.journey": "Trajetória", "nav.contact": "Contato",
     "hero.status": "Disponível para oportunidades em tecnologia",
     "hero.hi": "Olá, eu sou", "hero.i_build": "Eu construo",
-    "hero.sub": "Da logística do Exército Brasileiro para o desenvolvimento de software. Crio produtos web com IA aplicada, automações e interfaces interativas — do protótipo ao deploy.",
+    "hero.sub": "Da logística do Exército Brasileiro para a inteligência artificial. Uso IA aplicada e machine learning para criar produtos, automações e interfaces interativas, do protótipo ao deploy.",
     "hero.cta1": "Ver projetos", "hero.cta2": "Explorar pelo terminal", "hero.scroll": "role",
     "stats.projects": "projetos construídos", "stats.ai": "produtos com IA generativa", "stats.years": "anos em operações e liderança",
-    "projects.title": "Coisas que eu construí",
+    "projects.title": "Projetos que eu construí",
     "projects.lead": "Clique em um card para ver o problema, a solução, a stack e os detalhes técnicos.",
     "journey.title": "Uma carreira construída em operação",
     "journey.lead": "Disciplina, processos e liderança vieram antes do código. Hoje, eles definem como eu desenvolvo.",
@@ -29,14 +29,14 @@ const I18N = {
     "skills.lead": "Clique em uma tecnologia para ver em quais projetos ela foi usada.",
     "skills.pick": "// selecione uma tecnologia",
     "contact.title": "Vamos construir algo juntos?",
-    "contact.lead": "Busco minha primeira posição em tecnologia — desenvolvimento, IA ou análise de sistemas. Aberto a conversas, projetos e indicações.",
+    "contact.lead": "Busco minha primeira posição em tecnologia, com foco em IA aplicada, machine learning ou análise de sistemas. Aberto a conversas, projetos e indicações.",
     "footer.tip": "dica: aperte", "footer.tip2": "para abrir o terminal",
     typed: ["SaaS com IA.", "interfaces interativas.", "automações inteligentes.", "produtos do zero ao deploy."],
     filters: { all: "Todos", ai: "IA", fullstack: "Full-stack", interactive: "Interativo", automation: "Automação" },
     ui: {
       details: "ver detalhes", live: "no ar", proto: "protótipo", problem: "O problema", solution: "A solução",
       highlights: "Destaques técnicos", stack: "Stack", role: "Papel", visit: "Abrir site", prev: "← anterior", next: "próximo →",
-      usedIn: "Usado em", projects: "projeto(s)", noProjects: "Base de estudos e trabalho — ainda sem projeto público.",
+      usedIn: "Usado em", projects: "projeto(s)", noProjects: "Base de estudos e trabalho, ainda sem projeto público.",
       expand: "+ detalhes", collapse: "− fechar", strong: "usado em projetos", learning: "estudando",
       copy: "copiar", copied: "copiado!",
     },
@@ -45,7 +45,7 @@ const I18N = {
     "nav.projects": "Projects", "nav.journey": "Journey", "nav.contact": "Contact",
     "hero.status": "Open to opportunities in tech",
     "hero.hi": "Hi, I'm", "hero.i_build": "I build",
-    "hero.sub": "From Brazilian Army logistics to software development. I build web products with applied AI, automations and interactive interfaces — from prototype to deploy.",
+    "hero.sub": "From Brazilian Army logistics to software development. I build web products with applied AI, automations and interactive interfaces, from prototype to deploy.",
     "hero.cta1": "See projects", "hero.cta2": "Explore via terminal", "hero.scroll": "scroll",
     "stats.projects": "projects built", "stats.ai": "generative AI products", "stats.years": "years in operations & leadership",
     "projects.title": "Things I've built",
@@ -56,14 +56,14 @@ const I18N = {
     "skills.lead": "Click a technology to see which projects used it.",
     "skills.pick": "// pick a technology",
     "contact.title": "Let's build something together?",
-    "contact.lead": "I'm looking for my first role in tech — development, AI or systems analysis. Open to conversations, projects and referrals.",
+    "contact.lead": "I'm looking for my first role in tech, development, AI or systems analysis. Open to conversations, projects and referrals.",
     "footer.tip": "tip: press", "footer.tip2": "to open the terminal",
     typed: ["AI-powered SaaS.", "interactive interfaces.", "smart automations.", "products from zero to deploy."],
     filters: { all: "All", ai: "AI", fullstack: "Full-stack", interactive: "Interactive", automation: "Automation" },
     ui: {
       details: "see details", live: "live", proto: "prototype", problem: "The problem", solution: "The solution",
       highlights: "Technical highlights", stack: "Stack", role: "Role", visit: "Open site", prev: "← previous", next: "next →",
-      usedIn: "Used in", projects: "project(s)", noProjects: "Study and work foundation — no public project yet.",
+      usedIn: "Used in", projects: "project(s)", noProjects: "Study and work foundation, no public project yet.",
       expand: "+ details", collapse: "− close", strong: "used in projects", learning: "learning",
       copy: "copy", copied: "copied!",
     },
@@ -82,7 +82,7 @@ const PROJECTS = [
       title: "Leaf Chat", type: "SaaS · IA conversacional",
       short: "Plataforma SaaS multi-tenant de atendimento via WhatsApp com respostas geradas por IA.",
       problem: "Pequenas empresas perdem clientes porque não conseguem responder o WhatsApp rápido o bastante, e soluções prontas são caras ou genéricas.",
-      solution: "Uma plataforma onde cada empresa se cadastra, conecta seu número da WhatsApp Cloud API e passa a ter um atendente com IA que conhece o seu negócio — com landing page, cadastro, login e painel próprio.",
+      solution: "Uma plataforma onde cada empresa se cadastra, conecta seu número da WhatsApp Cloud API e passa a ter um atendente com IA que conhece o seu negócio, com landing page, cadastro, login e painel próprio.",
       highlights: [
         "Arquitetura multi-tenant: a empresa é identificada pelo phone_number_id do webhook, com clientes e conversas isolados por tenant.",
         "Respostas geradas com a OpenAI Responses API, usando o histórico da conversa como contexto.",
@@ -95,7 +95,7 @@ const PROJECTS = [
       title: "Leaf Chat", type: "SaaS · Conversational AI",
       short: "Multi-tenant SaaS for WhatsApp customer service with AI-generated replies.",
       problem: "Small businesses lose customers because they can't answer WhatsApp fast enough, and off-the-shelf tools are expensive or generic.",
-      solution: "A platform where each company signs up, connects its WhatsApp Cloud API number and gets an AI agent that knows its business — with landing page, sign-up, login and its own dashboard.",
+      solution: "A platform where each company signs up, connects its WhatsApp Cloud API number and gets an AI agent that knows its business, with landing page, sign-up, login and its own dashboard.",
       highlights: [
         "Multi-tenant architecture: the company is resolved from the webhook's phone_number_id, with customers and conversations isolated per tenant.",
         "Replies generated with the OpenAI Responses API, using conversation history as context.",
@@ -113,9 +113,9 @@ const PROJECTS = [
       title: "MEND Creative Studio", type: "Web app · IA generativa",
       short: "Estúdio criativo que transforma um briefing em conceitos e roteiros de vídeo com IA.",
       problem: "Creators e marcas sabem o que querem gravar, mas travam na hora de transformar a ideia em roteiro com minutagem, checklist e plano B.",
-      solution: "Um briefing guiado (público, tema, objetivo, equipamento, duração) que gera três conceitos com IA e desenvolve o escolhido em roteiro de 15, 30 ou 60 segundos — pronto para gravar.",
+      solution: "Um briefing guiado (público, tema, objetivo, equipamento, duração) que gera três conceitos com IA e desenvolve o escolhido em roteiro de 15, 30 ou 60 segundos, pronto para gravar.",
       highlights: [
-        "Integração server-side com a OpenAI Responses API — a chave nunca chega ao navegador.",
+        "Integração server-side com a OpenAI Responses API: a chave nunca chega ao navegador.",
         "Limite de 12 gerações por hora por pessoa, com reserva atômica de cota no Cloudflare D1 e devolução automática em caso de falha.",
         "Minutagem determinada pelo servidor; edição, cópia e exportação TXT; até 30 projetos salvos localmente.",
         "Modo de exemplo offline, explicitamente identificado, que funciona sem API.",
@@ -126,9 +126,9 @@ const PROJECTS = [
       title: "MEND Creative Studio", type: "Web app · Generative AI",
       short: "Creative studio that turns a brief into AI-generated video concepts and scripts.",
       problem: "Creators and brands know what they want to shoot, but get stuck turning the idea into a timed script with checklist and plan B.",
-      solution: "A guided brief (audience, theme, goal, gear, length) that generates three AI concepts and develops the chosen one into a 15, 30 or 60-second script — ready to shoot.",
+      solution: "A guided brief (audience, theme, goal, gear, length) that generates three AI concepts and develops the chosen one into a 15, 30 or 60-second script, ready to shoot.",
       highlights: [
-        "Server-side integration with the OpenAI Responses API — the key never reaches the browser.",
+        "Server-side integration with the OpenAI Responses API, the key never reaches the browser.",
         "12 generations per hour per user, with atomic quota reservation on Cloudflare D1 and automatic refund on failure.",
         "Server-computed timing; editing, copy and TXT export; up to 30 projects saved locally.",
         "Clearly labelled offline example mode that works without the API.",
@@ -144,11 +144,11 @@ const PROJECTS = [
       title: "Proud", type: "Web app · Produtividade",
       short: "Organizador profissional para DJs: agenda, shows, viagens, contatos, músicas e perfil público com booking.",
       problem: "DJs gerenciam shows, viagens, hotéis, contatos e músicas espalhados em planilhas, notas e conversas de WhatsApp.",
-      solution: "Um workspace único com Agenda, Shows, Contatos, Music e Profile — e um perfil público onde contratantes enviam um pedido de booking organizado direto para o WhatsApp.",
+      solution: "Um workspace único com Agenda, Shows, Contatos, Music e Profile, além de um perfil público onde contratantes enviam um pedido de booking organizado direto para o WhatsApp.",
       highlights: [
         "Autenticação completa (cadastro, confirmação de email, recuperação de senha) com Supabase Auth.",
         "Privacidade por padrão: Row Level Security garante que cada usuário só acessa os próprios dados.",
-        "Perfil público expõe somente o que foi publicado — nunca cachê, horários, notas ou contatos privados.",
+        "Perfil público expõe somente o que foi publicado, nunca cachê, horários, notas ou contatos privados.",
         "Upload de avatar, capa e arquivos de até 20 MB com Supabase Storage.",
         "Validado em produção com contas de teste: isolamento entre contas, persistência e exclusão.",
       ],
@@ -157,11 +157,11 @@ const PROJECTS = [
       title: "Proud", type: "Web app · Productivity",
       short: "Professional organizer for DJs: calendar, gigs, travel, contacts, music and a public profile with booking.",
       problem: "DJs manage gigs, travel, hotels, contacts and music across spreadsheets, notes and WhatsApp chats.",
-      solution: "A single workspace with Calendar, Shows, Contacts, Music and Profile — plus a public profile where promoters send a structured booking request straight to WhatsApp.",
+      solution: "A single workspace with Calendar, Shows, Contacts, Music and Profile, plus a public profile where promoters send a structured booking request straight to WhatsApp.",
       highlights: [
         "Full authentication (sign-up, email confirmation, password recovery) with Supabase Auth.",
         "Private by default: Row Level Security ensures each user only reaches their own data.",
-        "The public profile only exposes what was published — never fees, times, notes or private contacts.",
+        "The public profile only exposes what was published, never fees, times, notes or private contacts.",
         "Avatar, cover and file uploads up to 20 MB with Supabase Storage.",
         "Validated in production with test accounts: cross-account isolation, persistence and deletion.",
       ],
@@ -261,8 +261,8 @@ const PROJECTS = [
     pt: {
       title: "Semente", type: "Protótipo de produto · EdTech",
       short: "Plataforma de estudo bíblico com leitor, biblioteca, estudos pessoais e acervo pastoral.",
-      problem: "Um pastor queria oferecer à comunidade um espaço digital de estudo — hoje o conteúdo fica espalhado entre PDFs, livros e anotações.",
-      solution: "Um protótipo navegável com visão geral, leitor da Bíblia com seleção de versículos, biblioteca de comentários e área de estudos pessoais — base para validar a ideia antes de construir o backend.",
+      problem: "Um pastor queria oferecer à comunidade um espaço digital de estudo. Hoje o conteúdo fica espalhado entre PDFs, livros e anotações.",
+      solution: "Um protótipo navegável com visão geral, leitor da Bíblia com seleção de versículos, biblioteca de comentários e área de estudos pessoais, como base para validar a ideia antes de construir o backend.",
       highlights: [
         "SPA em JavaScript puro, sem frameworks, num único arquivo.",
         "Estudos salvos com localStorage, com tratamento para quando o armazenamento está indisponível.",
@@ -273,8 +273,8 @@ const PROJECTS = [
     en: {
       title: "Semente", type: "Product prototype · EdTech",
       short: "Bible study platform with reader, library, personal studies and a pastoral archive.",
-      problem: "A pastor wanted to give his community a digital study space — content was scattered across PDFs, books and notes.",
-      solution: "A clickable prototype with overview, Bible reader with verse selection, commentary library and personal studies — a base to validate the idea before building the backend.",
+      problem: "A pastor wanted to give his community a digital study space, content was scattered across PDFs, books and notes.",
+      solution: "A clickable prototype with overview, Bible reader with verse selection, commentary library and personal studies, a base to validate the idea before building the backend.",
       highlights: [
         "Vanilla JavaScript SPA, no frameworks, in a single file.",
         "Studies saved in localStorage, with handling for when storage is unavailable.",
@@ -291,10 +291,10 @@ const PROJECTS = [
 const JOURNEY = [
   {
     when: "2026 →",
-    pt: { title: "Desenvolvimento & IA aplicada", org: "Projetos próprios e para clientes", items: [
+    pt: { title: "IA aplicada & Machine Learning", org: "Projetos próprios e para clientes", items: [
       "7 projetos construídos: SaaS, web apps, agentes de IA e experiências interativas.",
       "Dois sites em produção na Vercel e um em uso por cliente real.",
-      "Desenvolvimento assistido por IA (Claude Code, Codex) com foco em código revisado e testado.",
+      "Todos os projetos construídos com IA (Claude Code, Codex), com código revisado e testado.",
     ]},
     en: { title: "Development & applied AI", org: "Own and client projects", items: [
       "8 projects built: SaaS, web apps, AI agents and interactive experiences.",
@@ -305,20 +305,20 @@ const JOURNEY = [
   {
     when: "2025 →",
     pt: { title: "Formação em tecnologia", org: "Stanford · DeepLearning.AI · AWS · ADS", items: [
-      "Machine Learning — Universidade Stanford (concluído).",
-      "Deep Learning — DeepLearning.AI (cursando).",
-      "AWS Cloud Foundations — Amazon Web Services (cursando).",
+      "Machine Learning, Universidade Stanford (concluído).",
+      "Deep Learning, DeepLearning.AI (cursando).",
+      "AWS Cloud Foundations, Amazon Web Services (cursando).",
       "Análise e Desenvolvimento de Sistemas (cursando).",
     ]},
     en: { title: "Tech education", org: "Stanford · DeepLearning.AI · AWS · Systems Analysis", items: [
-      "Machine Learning — Stanford University (completed).",
-      "Deep Learning — DeepLearning.AI (in progress).",
-      "AWS Cloud Foundations — Amazon Web Services (in progress).",
+      "Machine Learning, Stanford University (completed).",
+      "Deep Learning, DeepLearning.AI (in progress).",
+      "AWS Cloud Foundations, Amazon Web Services (in progress).",
       "Systems Analysis and Development degree (in progress).",
     ]},
   },
   {
-    when: "2025 – 2026",
+    when: "2025 a 2026",
     pt: { title: "Gerente Geral / Assistente de Marketing", org: "Bar La Fefa", items: [
       "Gestão completa das operações diárias e liderança da equipe.",
       "Estoque, compras e recebimento com foco em reduzir desperdício.",
@@ -333,7 +333,7 @@ const JOURNEY = [
     ]},
   },
   {
-    when: "2016 – 2024",
+    when: "2016 a 2024",
     pt: { title: "Sargento de Logística", org: "Exército Brasileiro", items: [
       "Operação dos sistemas SISCOFIS, SIAFI e SISBOL para controle patrimonial e financeiro.",
       "Gestão de estoques e registros de materiais de alto valor.",
@@ -362,11 +362,11 @@ const SKILLS = [
 
 /* textos da versão com scroll animado */
 Object.assign(I18N.pt, {
-  "hero.eyebrow": "Lucas Ribeiro — Desenvolvedor & IA aplicada",
+  "hero.eyebrow": "Lucas Ribeiro · IA aplicada e Machine Learning",
   "hero.t1": "Da logística", "hero.t2": "ao código.",
   "hero.badge": "São Paulo, BR · aberto a remoto",
-  "man.text": "Por oito anos eu planejei operações, controlei estoques e liderei equipes no Exército Brasileiro. Aprendi que uma boa entrega é previsível, rastreável e sem desculpas. Hoje levo essa mesma disciplina para o software: produtos com IA, automações e interfaces que vão do briefing ao deploy.",
-  "man.h1": "Eu movia carga.", "man.h2": "Hoje entrego software.",
+  "man.text": "Por oito anos eu planejei operações, controlei estoques e liderei equipes no Exército Brasileiro. Aprendi que uma boa entrega é previsível, rastreável e sem desculpas. Hoje levo essa mesma disciplina para a IA aplicada e o machine learning: produtos, automações e interfaces que vão do briefing ao deploy.",
+  "man.h1": "Eu movia carga.", "man.h2": "Hoje entrego IA aplicada.",
   "man.caption": "De muitas operações, um método",
   "stats.live": "sites em produção",
   "story.big": "Projetos", "story.tag": "carga de hoje · 7 projetos",
@@ -374,7 +374,7 @@ Object.assign(I18N.pt, {
   "contact.big": "Vamos conversar",
 });
 Object.assign(I18N.en, {
-  "hero.eyebrow": "Lucas Ribeiro — Developer & applied AI",
+  "hero.eyebrow": "Lucas Ribeiro, Developer & applied AI",
   "hero.t1": "From logistics", "hero.t2": "to code.",
   "hero.badge": "São Paulo, BR · open to remote",
   "man.text": "For eight years I planned operations, controlled inventory and led teams in the Brazilian Army. I learned that a good delivery is predictable, traceable and has no excuses. Today I bring that same discipline to software: AI products, automations and interfaces that go from brief to deploy.",

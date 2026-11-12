@@ -94,7 +94,7 @@ kbd { font-family: var(--mono); border: 1px solid currentColor; border-bottom-wi
 .story-big { position: absolute; top: 12%; left: 0; white-space: nowrap; font-family: var(--display); font-stretch: 125%; font-weight: 900; text-transform: uppercase; font-size: clamp(9rem, 26vw, 26rem); line-height: 1; color: #e4e4dd; will-change: transform; }
 .story-road { position: absolute; left: 0; right: 0; bottom: 0; height: 16%; background: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.55)), url("assets/asfalto.jpg") 0 0 / 420px auto repeat; border-top: 6px solid #c9c9c0; }
 .story-road .lane { position: absolute; left: 0; right: 0; top: 46%; height: 6px; background: repeating-linear-gradient(90deg, #f2f2ea 0 90px, transparent 90px 170px); opacity: .85; will-change: background-position; }
-.truck { position: absolute; left: 50%; bottom: 9.5%; width: min(1180px, 92vw); transform: translateX(-50%); will-change: transform; }
+.truck { position: absolute; left: 50%; bottom: 9.5%; width: min(1180px, 92vw); margin-left: calc(min(1180px, 92vw) / -2); will-change: transform; backface-visibility: hidden; }
 .truck img { width: 100%; height: auto; display: block; transform: scaleX(-1); position: relative; z-index: 1; }
 .truck-shadow { position: absolute; left: 2%; right: 2%; bottom: -3%; height: 12%; background: radial-gradient(closest-side, rgba(0,0,0,.55), transparent); filter: blur(6px); z-index: 0; }
 .decal { position: absolute; z-index: 2; left: 6%; top: 14%; width: 56%; height: 44%; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: .4em; text-align: center; color: #11131a; mix-blend-mode: multiply; pointer-events: none; }
@@ -104,18 +104,16 @@ kbd { font-family: var(--mono); border: 1px solid currentColor; border-bottom-wi
 
 /* projects */
 .projects { background: var(--ink); color: #fff; }
-.projects-pin { min-height: 100svh; display: flex; flex-direction: column; justify-content: center; gap: 34px; padding: 100px 0 50px; overflow: hidden; }
+.projects-pin { display: flex; flex-direction: column; gap: 40px; padding: 120px 0; }
 .projects-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; padding: 0 var(--pad); }
 .filters { display: flex; flex-wrap: wrap; gap: 8px; }
 .chip { font-family: var(--mono); font-size: .74rem; text-transform: uppercase; padding: 9px 14px; border-radius: 99px; border: 1px solid var(--line-dark); color: var(--gray); transition: all .2s; }
 .chip:hover { color: #fff; border-color: var(--gray); }
 .chip[aria-selected="true"] { background: #fff; color: #000; border-color: #fff; }
 .chip .n { opacity: .5; margin-left: 4px; }
-.track { display: flex; gap: 22px; padding: 0 var(--pad); width: max-content; will-change: transform; }
-.track-bar { margin: 0 var(--pad); height: 2px; background: var(--line-dark); }
-.track-bar span { display: block; height: 100%; width: 0; background: var(--lime); }
+.track { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 22px; padding: 0 var(--pad); }
 
-.card { position: relative; width: clamp(300px, 34vw, 470px); flex: none; text-align: left; display: flex; flex-direction: column; background: var(--ink-2); border: 1px solid var(--line-dark); border-radius: 20px; overflow: hidden; transition: transform .3s ease, border-color .3s, opacity .35s; --mx: 50%; --my: 50%; }
+.card { position: relative; width: 100%; text-align: left; display: flex; flex-direction: column; background: var(--ink-2); border: 1px solid var(--line-dark); border-radius: 20px; overflow: hidden; transition: transform .3s ease, border-color .3s, opacity .35s; --mx: 50%; --my: 50%; }
 .card::before { content: ""; position: absolute; inset: 0; background: radial-gradient(380px circle at var(--mx) var(--my), rgba(198,244,50,.09), transparent 45%); opacity: 0; transition: opacity .3s; pointer-events: none; z-index: 2; }
 .card:hover { border-color: rgba(198,244,50,.5); }
 .card:hover::before { opacity: 1; }
@@ -276,10 +274,6 @@ kbd { font-family: var(--mono); border: 1px solid currentColor; border-bottom-wi
   .nav-links { display: none; }
   .nav .pill.solid { display: none; }
   .man-grid { grid-template-columns: 1fr; margin-top: 100px; gap: 40px; }
-  .track { flex-direction: column; width: auto; }
-  .card { width: 100%; }
-  .projects-pin { padding-top: 100px; }
-  .track-bar { display: none; }
   .stops { grid-template-columns: minmax(0, 1fr); gap: 12vh; padding-left: 86px; padding-right: var(--pad); }
   .stop, .stop:nth-child(even) { width: 100%; justify-self: stretch; }
   .road-shoulder { stroke-width: 66; } .road-edge { stroke-width: 56; } .road-asphalt, .road-tint { stroke-width: 50; }
@@ -288,7 +282,7 @@ kbd { font-family: var(--mono); border: 1px solid currentColor; border-bottom-wi
   .skill-panel { position: static; }
   .m-cols { grid-template-columns: 1fr; gap: 0; }
   .story-big { top: 22%; }
-  .truck { width: 100vw; bottom: 12.5%; }
+  .truck { width: 100vw; margin-left: -50vw; bottom: 12.5%; }
   .story-big { top: 30%; }
   .story-road { height: 14%; }
   .hero-hint { display: none; }
