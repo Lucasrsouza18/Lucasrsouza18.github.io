@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lucas Ribeiro · Portfólio</title>
+  <meta name="description" content="Lucas Ribeiro de Souza — da logística ao código. Desenvolvimento web, IA aplicada e automação." />
+  <meta property="og:title" content="Lucas Ribeiro · Da logística ao código" />
+  <meta property="og:description" content="Desenvolvimento web, IA aplicada e automação." />
+  <meta property="og:image" content="assets/mend.jpg" />
+  <meta name="theme-color" content="#04050c" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2304050c'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='monospace' font-size='26' font-weight='700' fill='%23c6f432'%3ELR%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <header class="nav" id="nav">
+    <a href="#top" class="logo" aria-label="Início">LR<span>/</span></a>
+    <nav class="nav-links" aria-label="Seções">
+      <a href="#projetos" data-i18n="nav.projects">Projetos</a>
+      <a href="#trajetoria" data-i18n="nav.journey">Trajetória</a>
+      <a href="#skills">Skills</a>
+      <a href="#contato" data-i18n="nav.contact">Contato</a>
+    </nav>
+    <div class="nav-tools">
+      <button class="pill" id="termBtn" title="Terminal ( / )" aria-label="Abrir terminal">&gt;_</button>
+      <a class="pill solid" href="#contato" data-i18n="nav.contact">Contato</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO: globo + título gigante -->
+    <section class="hero" id="hero">
+      <canvas id="globe" aria-hidden="true"></canvas>
+      <div class="hero-inner" id="heroInner">
+        <p class="eyebrow" data-i18n="hero.eyebrow">Lucas Ribeiro — Desenvolvedor &amp; IA aplicada</p>
+        <h1 class="mega">
+          <span class="line"><span data-i18n="hero.t1">Da logística</span></span>
+          <span class="line"><span data-i18n="hero.t2">ao código.</span></span>
+        </h1>
+        <p class="hero-sub" data-i18n="hero.sub"></p>
+        <div class="hero-cta">
+          <a class="btn light" href="#projetos" data-i18n="hero.cta1">Ver projetos</a>
+          <button class="btn outline" id="heroTerm">&gt;_ <span data-i18n="hero.cta2">Explorar pelo terminal</span></button>
+        </div>
+      </div>
+      <p class="hero-badge mono"><span class="dot"></span><span data-i18n="hero.badge"></span></p>
+      <p class="hero-hint mono" aria-hidden="true">↓ scroll</p>
+    </section>
+
+    <!-- transição azul → claro -->
+    <div class="fade" aria-hidden="true"></div>
+
+    <!-- MANIFESTO: texto que acende com o scroll + números -->
+    <section class="manifesto">
+      <p class="scrub-text" id="scrubText" data-i18n="man.text"></p>
+      <div class="man-grid">
+        <h2 class="mega dark two-tone">
+          <span class="ghost" data-i18n="man.h1">Eu movia carga.</span>
+          <span data-i18n="man.h2">Hoje entrego software.</span>
+        </h2>
+        <div class="numbers">
+          <p class="num-caption" data-i18n="man.caption"></p>
+          <div class="num"><b><span class="count" data-to="7">0</span></b><span data-i18n="stats.projects"></span></div>
+          <div class="num"><b><span class="count" data-to="3">0</span></b><span data-i18n="stats.ai"></span></div>
+          <div class="num"><b><span class="count" data-to="10">0</span>+</b><span data-i18n="stats.years"></span></div>
+          <div class="num"><b><span class="count" data-to="2">0</span></b><span data-i18n="stats.live"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CENA: caminhão real atravessa a tela com a carga de projetos -->
+    <section class="story" id="story" aria-label="Animação: caminhão levando os projetos">
+      <div class="story-stage">
+        <div class="story-big" id="storyBig" aria-hidden="true"><span data-i18n="story.big">Projetos</span></div>
+        <p class="story-tag mono" data-i18n="story.tag"></p>
+        <div class="story-road" id="storyRoad" aria-hidden="true"><span class="lane" id="storyLane"></span></div>
+        <div class="truck" id="truck" aria-hidden="true">
+          <span class="truck-shadow"></span>
+          <img src="assets/caminhao-lateral.png" alt="" width="1500" height="431" />
+          <span class="decal"><b>&lt;/&gt; LUCAS RIBEIRO</b><small>7 PROJETOS · WEB · IA · AUTOMAÇÃO</small></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETOS: galeria horizontal -->
+    <section id="projetos" class="projects">
+      <div class="projects-pin" id="projectsPin">
+        <div class="projects-head">
+          <div>
+            <p class="kicker mono">01 / <span data-i18n="nav.projects">Projetos</span></p>
+            <h2 class="mega small" data-i18n="projects.title">Coisas que eu construí</h2>
+          </div>
+          <div class="filters" id="filters" role="tablist"></div>
+        </div>
+        <div class="track" id="track"></div>
+        <div class="track-bar" aria-hidden="true"><span id="trackBar"></span></div>
+      </div>
+    </section>
+
+    <!-- TRAJETÓRIA: estrada vista de cima -->
+    <section id="trajetoria" class="road">
+      <div class="road-head">
+        <p class="kicker mono">02 / <span data-i18n="nav.journey">Trajetória</span></p>
+        <h2 class="mega dark small" data-i18n="journey.title">A rota até aqui</h2>
+        <p class="lead" data-i18n="journey.lead"></p>
+      </div>
+      <div class="road-body" id="roadBody">
+        <svg class="road-svg" id="roadSvg" aria-hidden="true">
+          <defs>
+            <pattern id="asphalt" patternUnits="userSpaceOnUse" width="120" height="80">
+              <image href="assets/asfalto.jpg" width="120" height="80" preserveAspectRatio="xMidYMid slice" />
+            </pattern>
+            <filter id="truckShadow" x="-20%" y="-60%" width="140%" height="220%">
+              <feDropShadow dx="6" dy="10" stdDeviation="6" flood-color="#000" flood-opacity=".55" />
+            </filter>
+          </defs>
+          <path id="roadPath" class="road-shoulder" />
+          <path id="roadEdge" class="road-edge" />
+          <path id="roadAsphalt" class="road-asphalt" />
+          <path id="roadTint" class="road-tint" />
+          <path id="roadLine" class="road-line" />
+          <g id="roadTruck"><image id="roadTruckImg" href="assets/caminhao-topo.png" filter="url(#truckShadow)" /></g>
+        </svg>
+        <ol class="stops" id="stops"></ol>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section skills">
+      <div class="section-head">
+        <p class="kicker mono">03 / Skills</p>
+        <h2 class="mega dark small" data-i18n="skills.title">Ferramentas na prática</h2>
+        <p class="lead" data-i18n="skills.lead"></p>
+      </div>
+      <div class="skills-wrap">
+        <div class="skill-groups" id="skillGroups"></div>
+        <aside class="skill-panel" id="skillPanel" aria-live="polite"></aside>
+      </div>
+    </section>
+
+    <!-- NAVIO: transição para o contato -->
+    <section class="ship" id="ship" aria-label="Navio porta-contêiner visto de cima">
+      <img class="ship-img" id="shipImg" src="assets/navio.jpg" alt="" loading="lazy" />
+      <div class="ship-text">
+        <p class="kicker mono">Próxima rota</p>
+        <h2 class="mega small"><span class="ghost">Do porto</span><br />ao deploy.</h2>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="contact">
+      <div class="marquee" aria-hidden="true"><div class="marquee-inner" id="marquee"></div></div>
+      <div class="contact-inner">
+        <p class="kicker mono">04 / <span data-i18n="nav.contact">Contato</span></p>
+        <h2 class="mega small" data-i18n="contact.title">Vamos construir algo juntos?</h2>
+        <p class="lead" data-i18n="contact.lead"></p>
+        <div class="contact-links" id="contactLinks"></div>
+      </div>
+      <footer class="footer mono">
+        <span>© <span id="year"></span> Lucas Ribeiro de Souza</span>
+        <span><span data-i18n="footer.tip">dica: aperte</span> <kbd>/</kbd> <span data-i18n="footer.tip2">para abrir o terminal</span></span>
+      </footer>
+    </section>
+  </main>
+
+  <dialog class="modal" id="modal" aria-labelledby="mTitle">
+    <button class="modal-close" id="modalClose" aria-label="Fechar">✕</button>
+    <div class="modal-body" id="modalBody"></div>
+  </dialog>
+
+  <div class="term" id="term" hidden role="dialog" aria-label="Terminal">
+    <div class="term-bar">
+      <span class="tl r"></span><span class="tl y"></span><span class="tl g"></span>
+      <span class="term-title mono">lucas@portfolio: ~</span>
+      <button class="term-x" id="termClose" aria-label="Fechar terminal">✕</button>
+    </div>
+    <div class="term-out mono" id="termOut"></div>
+    <form class="term-in mono" id="termForm" autocomplete="off">
+      <span class="prompt">lucas@portfolio:~$</span>
+      <input id="termInput" spellcheck="false" aria-label="Comando" />
+    </form>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
